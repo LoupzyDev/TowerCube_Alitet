@@ -1,0 +1,10 @@
+# ninja log v5
+18	2882	7610712996465907	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	3b09f0aef3f18021
+84	2888	7610712996575948	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	7f283804df6e6751
+58	2917	7610712996396060	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	d3c83dcf8b240d4a
+28	2964	7610712997800092	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	5c9ee2253c4cef38
+73	2999	7610712997490913	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	8334816f65b57677
+10	3180	7610712999779988	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	6ca84accebfac480
+0	3346	7610713001869867	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	824314e8062b5f06
+40	3349	7610713001740234	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c1caf04bbc340188
+3349	3616	7610713004792553	C:/Users/ALUMNOS/Documents/Loupzy/TowerCube_Alitet/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/6z2c5h3k/obj/arm64-v8a/libgame.so	c63a6afc335670c9

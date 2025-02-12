@@ -14,9 +14,9 @@ public class Movement : MonoBehaviour {
 
 
     private void Start() {
-
-        moveAction = InputSystem.actions.FindAction("MoveCube");
-        Debug.Log(moveAction.name);
+        InputSystem.EnableDevice(Accelerometer.current);
+        //moveAction = InputSystem.actions.FindAction("MoveCube");
+        //Debug.Log(moveAction.name);
         rb = GetComponent<Rigidbody>();
         rb.linearDamping = 2f;
         rb.useGravity = false;
@@ -29,15 +29,10 @@ public class Movement : MonoBehaviour {
     }
 
     private void FixedUpdate() {
+
+        var acceleration = Accelerometer.current.acceleration.ReadValue();
         if (canMove) {
-            float moveX;
-
-            if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f) {
-                moveX = Input.GetAxis("Horizontal");
-            } else {
-                moveX = Input.acceleration.x * tiltSensitivity;
-            }
-
+            float moveX = acceleration.x * tiltSensitivity;
             rb.linearVelocity = new Vector3(moveX * speed, rb.linearVelocity.y, 0);
         }
 

@@ -1,0 +1,5 @@
+C:/Users/ALUMNOS/Documents/Loupzy/TowerCube_Alitet/.utmp/Debug/6z2c5h3k/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/ALUMNOS/Documents/Loupzy/TowerCube_Alitet/.utmp/Debug/6z2c5h3k/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/ALUMNOS/Documents/Loupzy/TowerCube_Alitet/.utmp/Debug/6z2c5h3k/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/ALUMNOS/Documents/Loupzy/TowerCube_Alitet/.utmp/Debug/6z2c5h3k/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/ALUMNOS/Documents/Loupzy/TowerCube_Alitet/.utmp/Debug/6z2c5h3k/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
