@@ -3,6 +3,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
     private Rigidbody rb;
     [SerializeField] private float speed = 5f;
+    [SerializeField] private float tiltSensitivity = 2f;
     private bool canMove = false;
     private bool hasCollided = false;
 
@@ -20,9 +21,10 @@ public class Movement : MonoBehaviour {
 
     private void Update() {
         if (canMove) {
-            float moveX = Input.GetAxis("Horizontal");
-            Vector3 movement = new Vector3(moveX * speed, rb.linearVelocity.y, 0);
-            rb.linearVelocity = movement;
+            Vector3 tilt = Input.acceleration; // Captura la inclinación del teléfono
+            float moveX = tilt.x * tiltSensitivity; // Usa la inclinación en X
+
+            rb.linearVelocity = new Vector3(moveX * speed, rb.linearVelocity.y, 0);
         }
     }
 
