@@ -2,6 +2,34 @@
     "name": "InputSystem_Actions",
     "maps": [
         {
+            "name": "Loupzy",
+            "id": "2de4b155-a83c-44ff-bb50-e21ef39fb7a9",
+            "actions": [
+                {
+                    "name": "MoveCube",
+                    "type": "Value",
+                    "id": "f3fcb4d0-9feb-441a-a44d-4a1d4ec8e3b5",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f6e3b745-0ea3-49eb-b303-5423322aba08",
+                    "path": "<Accelerometer>/acceleration",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR;Touch;Joystick;Gamepad;Keyboard&Mouse",
+                    "action": "MoveCube",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "Player",
             "id": "df70fa95-8a34-4494-b137-73ab6b9c7d37",
             "actions": [
@@ -45,7 +73,7 @@
                     "name": "Crouch",
                     "type": "Button",
                     "id": "27c5f898-bc57-4ee1-8800-db469aca5fe3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -986,34 +1014,6 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Loupzy",
-            "id": "2de4b155-a83c-44ff-bb50-e21ef39fb7a9",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "PassThrough",
-                    "id": "f3fcb4d0-9feb-441a-a44d-4a1d4ec8e3b5",
-                    "expectedControlType": "Touch",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "068ea7c2-b8c6-4189-92aa-8e710be08b94",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

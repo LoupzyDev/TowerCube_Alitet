@@ -1,13 +1,22 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour {
-    private Rigidbody rb;
+
     [SerializeField] private float speed = 5f;
     [SerializeField] private float tiltSensitivity = 2f;
+
+    private Rigidbody rb;
     private bool canMove = false;
     private bool hasCollided = false;
 
+    private InputAction moveAction;
+
+
     private void Start() {
+
+        moveAction = InputSystem.actions.FindAction("MoveCube");
+        Debug.Log(moveAction.name);
         rb = GetComponent<Rigidbody>();
         rb.linearDamping = 2f;
         rb.useGravity = false;
@@ -19,19 +28,28 @@ public class Movement : MonoBehaviour {
         canMove = true;
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         if (canMove) {
-            Vector3 tilt = Input.acceleration; // Captura la inclinación del teléfono
-            float moveX = tilt.x * tiltSensitivity; // Usa la inclinación en X
+            float moveX;
+
+            if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f) {
+                moveX = Input.GetAxis("Horizontal");
+            } else {
+                moveX = Input.acceleration.x * tiltSensitivity;
+            }
 
             rb.linearVelocity = new Vector3(moveX * speed, rb.linearVelocity.y, 0);
         }
+
     }
 
     private void OnCollisionEnter(Collision collision) {
         if (!hasCollided) {
             hasCollided = true;
             canMove = false;
+            if (collision.gameObject.CompareTag("Cube")) {
+                SpawnGenerator._instance.UpdateScore();
+            }
             SpawnGenerator._instance.spawnCube();
         }
     }

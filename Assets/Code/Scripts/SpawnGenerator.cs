@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SpawnGenerator : MonoBehaviour
@@ -11,12 +12,18 @@ public class SpawnGenerator : MonoBehaviour
     [SerializeField] private Material cubeMaterial;
     [SerializeField] private float reduceScale;
     private float currentScale = 1f;
-
-
+    public int score;
+    [SerializeField] private TextMeshProUGUI textScore;
     private void Start()
     {
         _instance = this;
+        score = 0;
         spawnCube();
+    }
+
+    public void UpdateScore() {
+        score++;
+        textScore.text = score.ToString("D2");
     }
 
     public void spawnCube() {

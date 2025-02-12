@@ -1,0 +1,2 @@
+M:\UnityGames\TowerCube_Alitet\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+M:\UnityGames\TowerCube_Alitet\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
